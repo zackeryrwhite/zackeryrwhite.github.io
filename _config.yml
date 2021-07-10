@@ -80,13 +80,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Zackery White"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
-  employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  name             : "Zackery White, MPH"
+  avatar           : "Headshot.png"
+  bio              : "PhD Student in Epidemiology"
+  location         : "NY,NY"
+  employer         : "University of Delaware"
+  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=White+Zackery"
+  googlescholar    : "https://scholar.google.com/citations?user=fV5qy3MAAAAJ&hl=en&authuser=1&oi=ao"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -96,20 +96,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "zackeryrwhite"
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : 
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0001-9612-2966"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : 
   vine             :
   weibo            :
   xing             :
