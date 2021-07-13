@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Zackery White, MPH"
-  avatar           : "Headshot.png"
+  avatar           : "headshot.png" 
   bio              : "PhD Student in Epidemiology"
   location         : "NY,NY"
   employer         : "University of Delaware"
