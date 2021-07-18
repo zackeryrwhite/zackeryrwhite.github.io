@@ -43,6 +43,7 @@
 .flex-wrapper {
   display: flex;
   flex-flow: row nowrap;
+  max-height: 100px;
 }
 
 .single-chart {
