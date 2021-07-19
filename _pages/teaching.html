@@ -135,3 +135,26 @@ author_profile: true
  <ol><blockquote>Maybe add an aspect of optional or required with a small set of questions to further my understanding of some concepts. In the weeks where we did have video aides, those concepts stuck really well.</blockquote></ol>
  <ol><blockquote>No more breakout rooms for lab work - nobody talked and people used each other for answers. I never got any benefit from working in the groups and usually just completed the assignments on my own.</blockquote></ol>
 </div>
+
+
+
+
+
+
+<!-- Javascript -->
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
