@@ -113,12 +113,13 @@
   text-align: left;
   outline: none;
   font-size: 15px;
-  background-color: #FFFF
+  background-color: #FFFF;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  font-color: #ccc;
+  color: #e9c46a ;
+  background-color: #FFF;
 }
 
 /* Style the collapsible content. Note: hidden by default */
