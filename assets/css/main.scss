@@ -76,23 +76,19 @@
   }
 }
 
-.circular-chart.orange .circle {
-  stroke: #F4A261;
+.circular-chart.high .circle {
+  stroke: #6A8EAE;
 }
 
-.circular-chart.red .circle {
-  stroke: #E76F51;
+.circular-chart.med .circle {
+  stroke: #9BD1E5;
 }
 
-.circular-chart.yellow .circle {
-  stroke: #E9C46A;
+.circular-chart.low .circle {
+  stroke: #D1FAFF;
 }
 
-.circular-chart.green .circle {
-  stroke: #2A9D8F;
-}
-
-.circular-chart.blue .circle {
+.circular-chart.gen .circle {
   stroke: #264653;
 }
 
