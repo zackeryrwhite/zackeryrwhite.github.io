@@ -105,7 +105,7 @@
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-  font-color: #444;
+  color: #264653;
   cursor: pointer;
   padding: 0px;
   width: 100%;
@@ -113,6 +113,7 @@
   text-align: left;
   outline: none;
   font-size: 15px;
+  background-color: #FFFF
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
