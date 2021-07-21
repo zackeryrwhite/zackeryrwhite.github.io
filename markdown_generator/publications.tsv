@@ -1,2 +1,41 @@
-pub_date	title	venue	excerpt	citation	 url_slug	paper_url
-2021-01-01	Using analytics to support a utility’s initial response to the COVID-19 pandemic amid an uncertain evidence base	Journal of Business Continuity & Emergency Planning	Energy utilities play a critical role in fostering disaster resilience. Much of the world is increasingly dependent on the availability and reliability of safe and efficient energy. In addition to its importance for industrial, commercial and household functionality, energy provision is increasingly significant in determining health and equity outcomes during a disaster. Amid the COVID-19 pandemic, issues of workforce protection and absenteeism are critical for public safety as well as for the continuity of operations for utilities and the businesses that rely upon them. However, COVID-19, and pandemics generally, have rapidly evolving and imperfect evidence available to support rapid and real-time decision making. This article reflects the initial setup and operations of frameworks utilising analytics to support decision making from March through July 2020 for a major US electric utility.	Schlegelmilch, J., Paaso, A., Ratner, J., Saxena, G., <b>White, Z.</b>, Aguilar, S., ... & Bahramirad, S. (2021). Using analytics to support a utility’s initial response to the COVID-19 pandemic amid an uncertain evidence base. <i>Journal of Business Continuity & Emergency Planning</i>, 14(3), 226-238.	Using analytics to support a utility’s initial response to the COVID-19 pandemic amid an uncertain evidence base	https://academiccommons.columbia.edu/doi/10.7916/d8-k5xw-gg30/download
+@article{schlegelmilch2021using,
+  title={Using analytics to support a utility’s initial response to the COVID-19 pandemic amid an uncertain evidence base},
+  author={Schlegelmilch, Jeff and Paaso, Aleksi and Ratner, Jackie and Saxena, Gunjan and White, Zackery and Aguilar, Susanna and Kushner, Daniel and Matevosyan, Norayr and Ortega, Jaime and Bahramirad, Shay},
+  journal={Journal of Business Continuity \& Emergency Planning},
+  volume={14},
+  number={3},
+  pages={226--238},
+  year={2021},
+  publisher={Henry Stewart Publications}
+}
+
+@article{white2020current,
+  title={Current Data Gaps in Modeling Essential Worker Absenteeism Due to COVID-19},
+  author={White, Zackery and Schlegelmilch, Jeff and Ratner, Jackie and Saxena, Gunjan and Wongsodirdjo, Kevin and Aguilar, Susanna and Kushner, Daniel and Ortega, Jim and Paaso, Aleksi and Bahramirad, Shay},
+  journal={Disaster Medicine and Public Health Preparedness},
+  pages={1--2},
+  year={2020},
+  publisher={Cambridge University Press}
+}
+
+@article{jenkins2017cavities,
+  title={Cavities and Cooperativity in the Folding of the Leucine Rich Repeat Protein PP32: A Pressure-Jump Fluorescence and High Pressure NMR Study},
+  author={Jenkins, Kelly A and Fossat, Martin and Dao, Thuy and Zhang, Yi and White, Zackery and Barrick, Doug and Royer, Catherine A},
+  journal={Biophysical Journal},
+  volume={112},
+  number={3},
+  pages={178a},
+  year={2017},
+  publisher={Elsevier}
+}
+
+@article{jenkins2018consequences,
+  title={The consequences of cavity creation on the folding landscape of a repeat protein depend upon context},
+  author={Jenkins, Kelly A and Fossat, Martin J and Zhang, Siwen and Rai, Durgesh K and Klein, Sean and Gillilan, Richard and White, Zackary and Gerlich, Grayson and McCallum, Scott A and Winter, Roland and others},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={115},
+  number={35},
+  pages={E8153--E8161},
+  year={2018},
+  publisher={National Acad Sciences}
+}
