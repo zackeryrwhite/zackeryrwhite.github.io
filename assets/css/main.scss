@@ -77,19 +77,19 @@
 }
 
 .circular-chart.high .circle {
-  stroke: #6A8EAE;
+  stroke: #567D9F;
 }
 
 .circular-chart.med .circle {
-  stroke: #9BD1E5;
+  stroke: #6D91B0;
 }
 
 .circular-chart.low .circle {
-  stroke: #ADF5FF;
+  stroke: #88A5BF;
 }
 
 .circular-chart.gen .circle {
-  stroke: #264653;
+  stroke: #39536A;
 }
 
 .percentage {
@@ -101,7 +101,7 @@
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-  color: #264653;
+  color: #243442;
   cursor: pointer;
   padding: 0px;
   width: 100%;
@@ -114,7 +114,7 @@
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-  color: #7898B5;
+  color: #39536A;
   background-color: #FFF;
 }
 
