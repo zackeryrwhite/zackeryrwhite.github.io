@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Zackery R. White, MPH, CPH"
+title                    : "Zackery R. White, MPH"
 title_separator          : "-"
 name                     : &name "Zackery R. White"
 description              : &description "personal description"
