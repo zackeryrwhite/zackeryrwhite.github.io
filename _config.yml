@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Zackery R. White, MPH"
+title                    : "Zackery R. White, MPH, CPH"
 title_separator          : "-"
 name                     : &name "Zackery R. White"
 description              : &description "personal description"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Zackery White, MPH"
+  name             : "Zackery White, MPH, CPH"
   avatar           : "Headshot.png" 
   bio              : "PhD Student in Epidemiology"
   location         : "New York City, NY"
@@ -102,7 +102,7 @@ author:
   instagram        : 
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "www.linkedin.com/in/zackery-r-white"
   orcid            : "https://orcid.org/0000-0001-9612-2966"
   pinterest        :
   soundcloud       :
