@@ -4,7 +4,8 @@ title: "EPI Tools"
 permalink: /epi/
 author_profile: true
 ---
-<script type="text/javascript">
+<head>
+    <script type="text/javascript">
   function calculate() {
     var exposed_outcome = document.getElementById("exposed_outcome").value;
     var not_exposed_outcome = document.getElementById("not_exposed_outcome").value;
@@ -23,6 +24,7 @@ author_profile: true
     document.getElementById("relative_risk_step").innerHTML = "Relative Risk = (" + exposed_outcome + " / (" + exposed_outcome + " + " + exposed_no_outcome + ")) / (" + not_exposed_outcome + " / (" + not_exposed_outcome + " + " + not_exposed_no_outcome + ")) = " + relative_risk;
   }
 </script>
+</head>
 <h1>2x2 Table Calculator</h1>
 <table>
   <tr>
