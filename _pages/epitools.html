@@ -4,100 +4,86 @@ title: "EPI Tools"
 permalink: /epi/
 author_profile: true
 ---
-<head>
-    <script type="text/javascript">
-  function calculate() {
-    var exposed_outcome = document.getElementById("exposed_outcome").value;
-    var not_exposed_outcome = document.getElementById("not_exposed_outcome").value;
-    var exposed_no_outcome = document.getElementById("exposed_no_outcome").value;
-    var not_exposed_no_outcome = document.getElementById("not_exposed_no_outcome").value;
+<script>
+    function calculate() {
+        // Retrieve form data
+        var exposed_1 = parseInt(document.getElementById("exposed_1").value);
+        var not_exposed_1 = parseInt(document.getElementById("not_exposed_1").value);
+        var exposed_2 = parseInt(document.getElementById("exposed_2").value);
+        var not_exposed_2 = parseInt(document.getElementById("not_exposed_2").value);
 
-    var odds_ratio = (exposed_outcome * not_exposed_no_outcome) / (not_exposed_outcome * exposed_no_outcome);
-    var relative_risk = (exposed_outcome / (exposed_outcome + exposed_no_outcome)) / (not_exposed_outcome / (not_exposed_outcome + not_exposed_no_outcome));
+        // Define the 2x2 table as an array
+        var table = [
+            ['Exposed', 'Not Exposed', 'Row Total'],
+            [exposed_1, not_exposed_1, exposed_1 + not_exposed_1],
+            [exposed_2, not_exposed_2, exposed_2 + not_exposed_2],
+            ['Column Total', exposed_1 + exposed_2, not_exposed_1 + not_exposed_2, exposed_1 + not_exposed_1 + exposed_2 + not_exposed_2]
+        ];
 
-    document.getElementById("odds_ratio").innerHTML = "Odds Ratio: " + odds_ratio;
-    document.getElementById("relative_risk").innerHTML = "Relative Risk: " + relative_risk;
+        // Calculate the row totals
+        var row1_total = table[1][0] + table[1][1];
+        var row2_total = table[2][0] + table[2][1];
 
-    // Show calculation steps
-    document.getElementById("calculation_steps").style.display = "block";
-    document.getElementById("odds_ratio_step").innerHTML = "Odds Ratio = (" + exposed_outcome + " * " + not_exposed_no_outcome + ") / (" + not_exposed_outcome + " * " + exposed_no_outcome + ") = " + odds_ratio;
-    document.getElementById("relative_risk_step").innerHTML = "Relative Risk = (" + exposed_outcome + " / (" + exposed_outcome + " + " + exposed_no_outcome + ")) / (" + not_exposed_outcome + " / (" + not_exposed_outcome + " + " + not_exposed_no_outcome + ")) = " + relative_risk;
-  }
+        // Calculate the column totals
+        var col1_total = table[1][0] + table[2][0];
+        var col2_total = table[1][1] + table[2][1];
+
+        // Calculate the odds ratio
+        var odds_ratio = (table[1][0] * table[2][1]) / (table[1][1] * table[2][0]);
+
+        // Calculate the relative risk
+        var relative_risk = (table[1][0] / row1_total) / (table[2][0] / row2_total);
+
+        // Display the 2x2 table with row and column totals
+        var html = '<table>';
+        for (var i = 0; i < table.length; i++) {
+            html += '<tr>';
+            for (var j = 0; j < table[i].length; j++) {
+                html += '<td>' + table[i][j] + '</td>';
+            }
+            html += '</tr>';
+        }
+        html += '<tr><td></td><td>' + col1_total + '</td><td>' + col2_total + '</td><td></td></tr>';
+        html += '</table>';
+        document.getElementById("result").innerHTML = html;
+
+        // Display the odds ratio and relative risk
+        document.getElementById("odds_ratio").innerHTML = odds_ratio.toFixed(2);
+        document.getElementById("relative_risk").innerHTML = relative_risk.toFixed(2);
+    }
 </script>
-</head>
-<h1>2x2 Table Calculator</h1>
-<table>
-  <tr>
-    <td></td>
-    <td>Exposed</td>
-    <td>Not Exposed</td>
-  </tr>
-  <tr>
-    <td>Outcome</td>
-    <td><input type="number" id="exposed_outcome" required></td>
-    <td><input type="number" id="not_exposed_outcome" required></td>
-  </tr>
-  <tr>
-    <td>No Outcome</td>
-    <td><input type="number" id="exposed_no_outcome" required></td>
-    <td><input type="number" id="not_exposed_no_outcome" required></td>
-  </tr>
-</table>
-<br>
-<input type="button" value="Calculate" onclick="calculate()">
-<br><br>
-<div id="odds_ratio"></div>
-<div id="relative_risk"></div>
-
-<!-- Calculation steps -->
-<div id="calculation_steps" style="display: none;">
-  <h3>Calculation Steps:</h3>
-  <p id="odds_ratio_step"></p>
-  <p id="relative_risk_step"></p>
-</div>
 
 
 <body>
-<h1>2x2 Table Calculator</h1>
-<form method="post">
-    <table>
-        <tr>
-            <td></td>
-            <td>Exposed</td>
-            <td>Not Exposed</td>
-        </tr>
-        <tr>
-            <td>Outcome</td>
-            <td><input type="number" name="exposed_outcome" required></td>
-            <td><input type="number" name="not_exposed_outcome" required></td>
-        </tr>
-        <tr>
-            <td>No Outcome</td>
-            <td><input type="number" name="exposed_no_outcome" required></td>
-            <td><input type="number" name="not_exposed_no_outcome" required></td>
-        </tr>
-    </table>
-    <br>
-    <input type="submit" value="Calculate">
-</form>
 
-<?php
-		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			$exposed_outcome = $_POST["exposed_outcome"];
-			$not_exposed_outcome = $_POST["not_exposed_outcome"];
-			$exposed_no_outcome = $_POST["exposed_no_outcome"];
-			$not_exposed_no_outcome = $_POST["not_exposed_no_outcome"];
+<!-- Display the form to input the 2x2 table -->
+<label>Exposed in Group 1:</label>
+<input type="number" id="exposed_1"><br>
+<label>Not Exposed in Group 1:</label>
+<input type="number" id="not_exposed_1"><br>
+<label>Exposed in Group 2:</label>
+<input type="number" id="exposed_2"><br>
+<label>Not Exposed in Group 2:</label>
+<input type="number" id="not_exposed_2"><br>
+<button onclick="calculate()">Calculate</button>
 
-			$odds_ratio = ($exposed_outcome * $not_exposed_no_outcome) / ($not_exposed_outcome * $exposed_no_outcome);
-			$relative_risk = ($exposed_outcome / ($exposed_outcome + $exposed_no_outcome)) / ($not_exposed_outcome / ($not_exposed_outcome + $not_exposed_no_outcome));
 
-			echo "<h2>Results:</h2>";
-            echo "<p>Odds Ratio: " . $odds_ratio . "</p>";
-            echo "<p>Relative Risk: " . $relative_risk . "</p>";
+<!-- Display the 2x2 table with row and column totals -->
+<div>
+    <h3>2x2 Table with Row and Column Totals</h3>
+    <div id="result"></div>
+</div>
 
-            // Show calculation steps
-            echo "<h3>Calculation Steps:</h3>";
-            echo "<p>Odds Ratio = (" . $exposed_outcome . " * " . $not_exposed_no_outcome . ") / (" . $not_exposed_outcome . " * " . $exposed_no_outcome . ") = " . $odds_ratio . "</p>";
-            echo "<p>Relative Risk = (" . $exposed_outcome . " / (" . $exposed_outcome . " + " . $exposed_no_outcome . ")) / (" . $not_exposed_outcome . " / (" . $not_exposed_outcome . " + " . $not_exposed_no_outcome . ")) = " . $relative_risk . "</p>";
-            }
-?>
+<!-- Display the odds ratio -->
+<div>
+    <h3>Odds Ratio</h3>
+    <div id="odds_ratio"></div>
+</div>
+
+<!-- Display the relative risk -->
+<div>
+    <h3>Relative Risk</h3>
+    <div id="relative_risk"></div>
+</div>
+
+</body>
