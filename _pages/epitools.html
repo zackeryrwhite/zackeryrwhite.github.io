@@ -4,9 +4,7 @@ title: "EPI Tools"
 permalink: /epi/
 author_profile: true
 ---
-<head>
-        <script src="assets/js/twobytwo.js"></script>
-</head>
+<script src="/assets/js/twobytwo.js"></script>
 <body>
 
 <!-- Display the form to input the 2x2 table -->
@@ -18,7 +16,7 @@ author_profile: true
 <input type="number" id="exposed_2"><br>
 <label>Not Exposed in Group 2:</label>
 <input type="number" id="not_exposed_2"><br>
-<button onclick="calculate()">Calculate</button>
+<button type="button" class="btn btn-dark mt-1" id="ORbutton" onclick="calculate()">Calculate</button>
 
 <!-- Display the 2x2 table with row and column totals -->
 <div>
@@ -58,13 +56,13 @@ author_profile: true
             <button type="button" class="btn btn-dark mt-1" id="cnvrtbutton" onclick="val()">Convert</button>
         </div>
         <div class="col" id="resultcol">
-            <p id="result"> Result is here!</p>
+            <p id="results"> Result is here!</p>
         </div>
     </div>
 </div>
 <script>
     function val() {
         var g = parseFloat(document.getElementById("textvalue").value);
-        document.getElementById("result").innerHTML = g + "g is " + (g / 1000) + " kg";
+        document.getElementById("results").innerHTML = g + "g is " + (g / 1000) + " kg";
     };
 </script>
