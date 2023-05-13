@@ -4,52 +4,52 @@ title: "EPI Tools"
 permalink: /epitools/
 author_profile: true
 ---
-<script type="text/javascript">
-  function calculate() {
-    var exposed_outcome = document.getElementById("exposed_outcome").value;
-    var not_exposed_outcome = document.getElementById("not_exposed_outcome").value;
-    var exposed_no_outcome = document.getElementById("exposed_no_outcome").value;
-    var not_exposed_no_outcome = document.getElementById("not_exposed_no_outcome").value;
+<!--<script type="text/javascript">-->
+<!--  function calculate() {-->
+<!--    var exposed_outcome = document.getElementById("exposed_outcome").value;-->
+<!--    var not_exposed_outcome = document.getElementById("not_exposed_outcome").value;-->
+<!--    var exposed_no_outcome = document.getElementById("exposed_no_outcome").value;-->
+<!--    var not_exposed_no_outcome = document.getElementById("not_exposed_no_outcome").value;-->
 
-    var odds_ratio = (exposed_outcome * not_exposed_no_outcome) / (not_exposed_outcome * exposed_no_outcome);
-    var relative_risk = (exposed_outcome / (exposed_outcome + exposed_no_outcome)) / (not_exposed_outcome / (not_exposed_outcome + not_exposed_no_outcome));
+<!--    var odds_ratio = (exposed_outcome * not_exposed_no_outcome) / (not_exposed_outcome * exposed_no_outcome);-->
+<!--    var relative_risk = (exposed_outcome / (exposed_outcome + exposed_no_outcome)) / (not_exposed_outcome / (not_exposed_outcome + not_exposed_no_outcome));-->
 
-    document.getElementById("odds_ratio").innerHTML = "Odds Ratio: " + odds_ratio;
-    document.getElementById("relative_risk").innerHTML = "Relative Risk: " + relative_risk;
+<!--    document.getElementById("odds_ratio").innerHTML = "Odds Ratio: " + odds_ratio;-->
+<!--    document.getElementById("relative_risk").innerHTML = "Relative Risk: " + relative_risk;-->
 
-    // Show calculation steps
-    document.getElementById("calculation_steps").style.display = "block";
-    document.getElementById("odds_ratio_step").innerHTML = "Odds Ratio = (" + exposed_outcome + " * " + not_exposed_no_outcome + ") / (" + not_exposed_outcome + " * " + exposed_no_outcome + ") = " + odds_ratio;
-    document.getElementById("relative_risk_step").innerHTML = "Relative Risk = (" + exposed_outcome + " / (" + exposed_outcome + " + " + exposed_no_outcome + ")) / (" + not_exposed_outcome + " / (" + not_exposed_outcome + " + " + not_exposed_no_outcome + ")) = " + relative_risk;
-  }
-</script>
-<h1>2x2 Table Calculator</h1>
-<table>
-  <tr>
-    <td></td>
-    <td>Exposed</td>
-    <td>Not Exposed</td>
-  </tr>
-  <tr>
-    <td>Outcome</td>
-    <td><input type="number" id="exposed_outcome" required></td>
-    <td><input type="number" id="not_exposed_outcome" required></td>
-  </tr>
-  <tr>
-    <td>No Outcome</td>
-    <td><input type="number" id="exposed_no_outcome" required></td>
-    <td><input type="number" id="not_exposed_no_outcome" required></td>
-  </tr>
-</table>
-<br>
-<input type="button" value="Calculate" onclick="calculate()">
-<br><br>
-<div id="odds_ratio"></div>
-<div id="relative_risk"></div>
+<!--    // Show calculation steps-->
+<!--    document.getElementById("calculation_steps").style.display = "block";-->
+<!--    document.getElementById("odds_ratio_step").innerHTML = "Odds Ratio = (" + exposed_outcome + " * " + not_exposed_no_outcome + ") / (" + not_exposed_outcome + " * " + exposed_no_outcome + ") = " + odds_ratio;-->
+<!--    document.getElementById("relative_risk_step").innerHTML = "Relative Risk = (" + exposed_outcome + " / (" + exposed_outcome + " + " + exposed_no_outcome + ")) / (" + not_exposed_outcome + " / (" + not_exposed_outcome + " + " + not_exposed_no_outcome + ")) = " + relative_risk;-->
+<!--  }-->
+<!--</script>-->
+<!--<h1>2x2 Table Calculator</h1>-->
+<!--<table>-->
+<!--  <tr>-->
+<!--    <td></td>-->
+<!--    <td>Exposed</td>-->
+<!--    <td>Not Exposed</td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>Outcome</td>-->
+<!--    <td><input type="number" id="exposed_outcome" required></td>-->
+<!--    <td><input type="number" id="not_exposed_outcome" required></td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>No Outcome</td>-->
+<!--    <td><input type="number" id="exposed_no_outcome" required></td>-->
+<!--    <td><input type="number" id="not_exposed_no_outcome" required></td>-->
+<!--  </tr>-->
+<!--</table>-->
+<!--<br>-->
+<!--<input type="button" value="Calculate" onclick="calculate()">-->
+<!--<br><br>-->
+<!--<div id="odds_ratio"></div>-->
+<!--<div id="relative_risk"></div>-->
 
-<!-- Calculation steps -->
-<div id="calculation_steps" style="display: none;">
-  <h3>Calculation Steps:</h3>
-  <p id="odds_ratio_step"></p>
-  <p id="relative_risk_step"></p>
-</div>
+<!--&lt;!&ndash; Calculation steps &ndash;&gt;-->
+<!--<div id="calculation_steps" style="display: none;">-->
+<!--  <h3>Calculation Steps:</h3>-->
+<!--  <p id="odds_ratio_step"></p>-->
+<!--  <p id="relative_risk_step"></p>-->
+<!--</div>-->
