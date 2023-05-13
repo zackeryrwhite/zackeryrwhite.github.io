@@ -5,7 +5,7 @@ permalink: /epi/
 author_profile: true
 ---
 <script>
-    function calculate() {
+    function odds() {
         // Retrieve form data
         var exposed_1 = parseInt(document.getElementById("exposed_1").value);
         var not_exposed_1 = parseInt(document.getElementById("not_exposed_1").value);
@@ -21,21 +21,21 @@ author_profile: true
         ];
 
         // Calculate the row totals
-        var row1_total = table[1][0] + table[1][1];
-        var row2_total = table[2][0] + table[2][1];
+        let row1_total = table[1][0] + table[1][1];
+        let row2_total = table[2][0] + table[2][1];
 
         // Calculate the column totals
-        var col1_total = table[1][0] + table[2][0];
-        var col2_total = table[1][1] + table[2][1];
+        let col1_total = table[1][0] + table[2][0];
+        let col2_total = table[1][1] + table[2][1];
 
         // Calculate the odds ratio
-        var odds_ratio = (table[1][0] * table[2][1]) / (table[1][1] * table[2][0]);
+        let odds_ratio = (table[1][0] * table[2][1]) / (table[1][1] * table[2][0]);
 
         // Calculate the relative risk
-        var relative_risk = (table[1][0] / row1_total) / (table[2][0] / row2_total);
+        let relative_risk = (table[1][0] / row1_total) / (table[2][0] / row2_total);
 
         // Display the 2x2 table with row and column totals
-        var html = '<table>';
+        let html = '<table>';
         for (var i = 0; i < table.length; i++) {
             html += '<tr>';
             for (var j = 0; j < table[i].length; j++) {
@@ -53,9 +53,6 @@ author_profile: true
     }
 </script>
 
-
-<body>
-
 <!-- Display the form to input the 2x2 table -->
 <label>Exposed in Group 1:</label>
 <input type="number" id="exposed_1"><br>
@@ -65,7 +62,7 @@ author_profile: true
 <input type="number" id="exposed_2"><br>
 <label>Not Exposed in Group 2:</label>
 <input type="number" id="not_exposed_2"><br>
-<button onclick="calculate()">Calculate</button>
+<button onclick="odds()">Calculate</button>
 
 
 <!-- Display the 2x2 table with row and column totals -->
@@ -85,5 +82,3 @@ author_profile: true
     <h3>Relative Risk</h3>
     <div id="relative_risk"></div>
 </div>
-
-</body>
