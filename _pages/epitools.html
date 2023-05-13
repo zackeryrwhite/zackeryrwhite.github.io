@@ -55,3 +55,49 @@ author_profile: true
   <p id="odds_ratio_step"></p>
   <p id="relative_risk_step"></p>
 </div>
+
+
+<body>
+<h1>2x2 Table Calculator</h1>
+<form method="post">
+    <table>
+        <tr>
+            <td></td>
+            <td>Exposed</td>
+            <td>Not Exposed</td>
+        </tr>
+        <tr>
+            <td>Outcome</td>
+            <td><input type="number" name="exposed_outcome" required></td>
+            <td><input type="number" name="not_exposed_outcome" required></td>
+        </tr>
+        <tr>
+            <td>No Outcome</td>
+            <td><input type="number" name="exposed_no_outcome" required></td>
+            <td><input type="number" name="not_exposed_no_outcome" required></td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="Calculate">
+</form>
+
+<?php
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			$exposed_outcome = $_POST["exposed_outcome"];
+			$not_exposed_outcome = $_POST["not_exposed_outcome"];
+			$exposed_no_outcome = $_POST["exposed_no_outcome"];
+			$not_exposed_no_outcome = $_POST["not_exposed_no_outcome"];
+
+			$odds_ratio = ($exposed_outcome * $not_exposed_no_outcome) / ($not_exposed_outcome * $exposed_no_outcome);
+			$relative_risk = ($exposed_outcome / ($exposed_outcome + $exposed_no_outcome)) / ($not_exposed_outcome / ($not_exposed_outcome + $not_exposed_no_outcome));
+
+			echo "<h2>Results:</h2>";
+            echo "<p>Odds Ratio: " . $odds_ratio . "</p>";
+            echo "<p>Relative Risk: " . $relative_risk . "</p>";
+
+            // Show calculation steps
+            echo "<h3>Calculation Steps:</h3>";
+            echo "<p>Odds Ratio = (" . $exposed_outcome . " * " . $not_exposed_no_outcome . ") / (" . $not_exposed_outcome . " * " . $exposed_no_outcome . ") = " . $odds_ratio . "</p>";
+            echo "<p>Relative Risk = (" . $exposed_outcome . " / (" . $exposed_outcome . " + " . $exposed_no_outcome . ")) / (" . $not_exposed_outcome . " / (" . $not_exposed_outcome . " + " . $not_exposed_no_outcome . ")) = " . $relative_risk . "</p>";
+            }
+?>
