@@ -39,3 +39,32 @@ author_profile: true
 </div>
 
 </body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+            <h1>convert grams(g) to kilograms(kg) </h1>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="main-content">
+    <div class="row">
+        <div class="col">
+            <div class="input-group input-group-newsletter mb-5">
+                <input type="string" class="form-control" placeholder="Enter value" id="textvalue">
+            </div>
+            <button type="button" class="btn btn-dark mt-1" id="cnvrtbutton" onclick="val()">Convert</button>
+        </div>
+        <div class="col" id="resultcol">
+            <p id="result"> Result is here!</p>
+        </div>
+    </div>
+</div>
+<script>
+    function val() {
+        var g = parseFloat(document.getElementById("textvalue").value);
+        document.getElementById("result").innerHTML = g + "g is " + (g / 1000) + " kg";
+    };
+</script>
